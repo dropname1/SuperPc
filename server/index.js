@@ -1,6 +1,9 @@
 const express = require('express')
+const cors = require('cors')
 
 const server = express()
+
+server.use(cors({origin:'http://localhost:5173'}))
 
 server.get('/', (req, res) => {
   res.json({ title: 'SuperPC' })
