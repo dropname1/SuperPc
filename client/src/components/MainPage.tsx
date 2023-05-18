@@ -12,7 +12,7 @@ import FilterItem from './FilterItem';
 import FooterItem from './FooterItem';
 
 
-export default function MainPage() {
+export default function MainPage({open}:{open: any}) {
 
 const [proccesor, setProccesor] = useState([
   {id: 1, name: 'Rayzen 3', price: 5550, rate: 4.5,},
@@ -60,7 +60,12 @@ const [videocart, setVideocart] = useState([
             {proccesor &&
               proccesor.map((product) => {
                 return (
-                  <ProductItem key={product.id} product={product} image={processorImg}/>
+                  <ProductItem
+                    open={open}
+                    key={product.id}
+                    product={product}
+                    image={processorImg}
+                  />
                 );
               })}
           </div>
@@ -72,6 +77,7 @@ const [videocart, setVideocart] = useState([
               videocart.map((product) => {
                 return (
                   <ProductItem
+                    open={open}
                     key={product.id}
                     product={product}
                     image={videocartImg}
@@ -87,6 +93,7 @@ const [videocart, setVideocart] = useState([
               ram.map((product) => {
                 return (
                   <ProductItem
+                    open={open}
                     key={product.id}
                     product={product}
                     image={ramImg}
@@ -96,7 +103,7 @@ const [videocart, setVideocart] = useState([
           </div>
         </div>
       </div>
-      <FooterItem/>
+      <FooterItem />
     </div>
   );
 }
