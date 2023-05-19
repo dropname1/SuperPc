@@ -21,7 +21,7 @@ body {
   font-family: Montserrat;
   font-weight: 600;
   margin: 0;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,18 +161,22 @@ margin-left: -35px;
 .products {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 27px;
+  column-gap: 27px;
+  
   /* width: 1000px; */
 }
 .product-wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
+  box-sizing:border-box;
+  padding-bottom: 20px;
   width: 300px;
-  height: 370px;
+  height: 390px;
   border-radius: 30px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.267);
-  /* margin-bottom: 27px; */
+  margin-bottom: 27px;
 }
 .product-wrapper img {
   margin-top: 20px;
@@ -181,6 +185,7 @@ margin-left: -35px;
   color: #838383;
   margin-bottom: 10px;
   margin-top: 20px;
+  font-size: 25px;
 }
 .name-price-wrapper {
   width: 240px;
@@ -190,11 +195,21 @@ margin-left: -35px;
 }
 .product-name {
   color: black;
-  max-width: 150px;
-  height: 50px;
+  max-width: 250px;
 }
 .product-price {
   color: orange;
+}
+.product-price-product-page {
+  text-align: center;
+  color: #DF6464;
+  font-size: 28px;
+}
+.product-name-product-page {
+  text-align: center;
+  color: black;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 .product-rate {
   width: fit-content;
@@ -252,4 +267,182 @@ margin-left: -35px;
   width: 150px;
   display: flex;
   justify-content: space-between;
+}
+.basket-page-main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BasketProduct */
+
+.basket-product-wrapper {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 633px;
+  height: 200px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.233);
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+}
+.product-name-price-bascet {
+  width: 350px;
+  height: 200px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-name-bascet {
+  font-size: 17px;
+  color: black;
+  margin-bottom: 10px;
+}
+.product-price-basket {
+  color: gray;
+}
+.remove-price-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  height: 170px;
+}
+.product-price-basket-2 {
+  font-size: 15px;
+  color: black;
+}
+
+/* BascetPage */
+
+.bascet-page-wrapper {
+  display: flex;
+  width: 1100px;
+  min-height: 90vh;
+  justify-content: space-between;
+}
+.bascet-page-title {
+  align-self: start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.shopping {
+  width: 320px;
+  height: 100px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.233);
+
+}
+.in-total-sum {
+  box-sizing: border-box;
+  padding: 20px 20px ;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+.in-total {
+}
+.sum {
+}
+.shopping-button {
+  border-radius: 20px;
+  width: 320px;
+  height: 60px;
+  color: white;
+  background-color: black;
+  border: none;
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/* ProductPage */
+.product-page-main-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 1100px;
+}
+.product-page-wrpper {
+  display: flex;
+  justify-content: space-between;
+}
+.product-page {
+  display: flex;
+  flex-direction: column;
+}
+.product-wrapper-product-page {
+  width: 770px;
+  height: 360px;
+  border-radius: 30px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 55px 22px 68px;
+  box-sizing: border-box;
+}
+.product-title {
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.rec-title {
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.name-price-buy-bascet {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.name-price {
+}
+.product-name {
+  font-size: 22px;
+  color: black;
+}
+.product-price {
+  font-size: 22px;
+
+}
+.buy-basket {
+  height: 100px;
+}
+.button-buy {
+  width: 250px;
+  height: 45px;
+  color: white;
+  border-radius: 10px;
+  background-color: #000;
+  margin-bottom: 10px;
+  border: none;
+  font-weight: 600;
+}
+.button-in-bascet {
+   width: 250px;
+  height: 45px;
+  color: white;
+  border-radius: 10px;
+  background-color: #000;
+  border: none;
+  font-weight: 600;
+}
+.product-info {
+}
+.info-title {
+}
+.info-text {
+}
+.rec-products {
 }

@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
+type P_object = {
+  id: number,
+  name: string,
+  price: number,
+  rate: number
+}
 
-export default function productItem({product, image, open}:{product: any, image: any, open: any}) {
+export default function productItem({product, image, open}:{product: P_object, image: string, open: any}) {
   return (
     <div className="product-wrapper" key={product.id}>
       <Link to="/product">
