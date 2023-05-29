@@ -1,4 +1,5 @@
 export default (sequelize, Sequelize) => {
+
   const Catalog = sequelize.define("catalog", {
     name: {
       type: Sequelize.STRING
@@ -14,9 +15,6 @@ export default (sequelize, Sequelize) => {
     },
     type: {
       type: Sequelize.STRING
-    },
-    publiched: {
-      type: Sequelize.BOOLEAN
     },
     weight: {
       type: Sequelize.INTEGER

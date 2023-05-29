@@ -18,7 +18,6 @@ const db = {};
 
 db.Sequelize = Sequelize
 db.sequelize = sequelize
-
 db.catalogModel = catalogModel(sequelize, Sequelize)
 
 export default db
